@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Client Profile</h1>
+        <div class="search-container">
+            <input type="number" id="clientId" placeholder="Enter Client ID">
+            <button onclick="fetchClientProfile()">Search</button>
+        </div>
+        
+        <div id="profile" class="hidden">
+            <div class="profile-section">
+                <h2>Personal Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Name:</label>
+                        <span id="clientName">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Gender:</label>
+                        <span id="clientGender">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email:</label>
+                        <span id="clientEmail">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone:</label>
+                        <span id="clientPhone">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Registration Date:</label>
+                        <span id="clientRegistered">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Active Enrollments</h2>
+                <div id="activeEnrollments" class="enrollments-container"></div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Dropped Enrollments</h2>
+                <div id="droppedEnrollments" class="enrollments-container"></div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Appointments</h2>
+                <div id="appointments" class="appointments-container"></div>
+            </div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
